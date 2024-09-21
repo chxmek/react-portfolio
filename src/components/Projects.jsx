@@ -18,15 +18,15 @@ function Projects() {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-up');
+          entry.target.classList.add("fade-in-up");
           observer.unobserve(entry.target); // Stop observing after animation
         }
       });
     });
 
-    projectRefs.current.forEach(ref => {
+    projectRefs.current.forEach((ref) => {
       if (ref) {
         observer.observe(ref);
       }
@@ -34,7 +34,7 @@ function Projects() {
 
     return () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      projectRefs.current.forEach(ref => {
+      projectRefs.current.forEach((ref) => {
         if (ref) {
           observer.unobserve(ref);
         }
@@ -49,10 +49,10 @@ function Projects() {
       </h2>
       <div>
         {PROJECTS.map((project, index) => (
-          <div 
-            key={index} 
-            ref={el => projectRefs.current[index] = el} // Assign ref to each project
-            className="mb-8 flex flex-wrap lg:justify-center" 
+          <div
+            key={index}
+            ref={(el) => (projectRefs.current[index] = el)} // Assign ref to each project
+            className="mb-8 flex flex-wrap lg:justify-center"
           >
             <div className="w-full lg:w-1/4">
               <img
@@ -64,17 +64,19 @@ function Projects() {
                 onClick={() => handleImageClick(project.image)}
               />
             </div>
-            <div className="w-full max-w-xl lg:w-3/4 flex flex-wrap">
+            <div className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500"
-                >
-                  {tech}
-                </span>
-              ))}
+              <div className="flex flex-wrap">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-500"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}
