@@ -53,16 +53,16 @@ function Technologies() {
       </h2>
       <div className="flex flex-wrap items-center justify-center gap-4">
         {[
-          { href: "https://developer.mozilla.org/en-US/docs/Web/HTML", icon: <FaHtml5 className="text-7xl text-red-500" /> },
-          { href: "https://developer.mozilla.org/en-US/docs/Web/CSS", icon: <FaCss3Alt className="text-7xl text-blue-500" /> },
-          { href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: <IoLogoJavascript className="text-7xl text-yellow-400" /> },
+          { href: "https://developer.mozilla.org/docs/Web/HTML", icon: <FaHtml5 className="text-7xl text-red-500" /> },
+          { href: "https://developer.mozilla.org/docs/Web/CSS", icon: <FaCss3Alt className="text-7xl text-blue-500" /> },
+          { href: "https://developer.mozilla.org/docs/Web/JavaScript", icon: <IoLogoJavascript className="text-7xl text-yellow-400" /> },
           { href: "https://react.dev/", icon: <RiReactjsLine className="text-7xl text-cyan-400" /> },
           { href: "https://nextjs.org/", icon: <TbBrandNextjs className="text-7xl" /> },
           { href: "https://flutter.dev/", icon: <SiFlutter className="text-7xl text-cyan-500" /> },
           { href: "https://dotnet.microsoft.com/", icon: <AiOutlineDotNet className="text-7xl text-sky-700" /> },
           { href: "https://nodejs.org/", icon: <FaNodeJs className="text-7xl text-green-500" /> },
           { href: "https://firebase.google.com/", icon: <SiFirebase className="text-7xl text-amber-500" /> },
-          { href: "https://www.microsoft.com/en-us/sql-server", icon: <SiMicrosoftsqlserver className="text-7xl text-red-700" /> },
+          { href: "https://www.microsoft.com/sql-server", icon: <SiMicrosoftsqlserver className="text-7xl text-red-700" /> },
           { href: "https://isocpp.org/", icon: <SiCplusplus className="text-7xl text-blue-300" /> },
           { href: "https://www.postman.com/", icon: <SiPostman className="text-7xl text-amber-500" /> },
           { href: "https://swagger.io/", icon: <SiSwagger className="text-7xl text-yellow-500" /> },
