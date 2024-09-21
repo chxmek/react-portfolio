@@ -3,7 +3,7 @@ import flutterCertificate from "../assets/projects/flutterCertificate.jpg";
 import iotCertificate from "../assets/projects/iotCertificate.jpg";
 import pythonCertificate from "../assets/projects/pythonCertificate.jpg";
 
-export const HERO_CONTENT = `Hello, I'm Chawanwit Silakhan, a frontend developer with a passion for building intuitive and engaging digital experiences. I specialize in developing responsive and interactive web applications, leveraging modern technologies like HTML, CSS, JavaScript, and React/Flutter to transform ideas into functional and visually appealing solutions.`;
+export const HERO_CONTENT = `Hello, I'm Chawanwit Silakhan, a software developer with a passion for building intuitive and engaging digital experiences. I specialize in developing responsive and interactive web applications, leveraging modern technologies like HTML, CSS, JavaScript, and React/Flutter to transform ideas into functional and visually appealing solutions.`;
 
 export const ABOUT_TEXT = `I am a fresh graduate of 2024 with a Bachelor's degree in Electronics and Computer Systems Engineering from the Faculty of Engineering at Silpakorn University. I have hands-on experience as a Mobile Developer through a 6-month co-op and internship, where I designed and developed mobile applications integrated with databases.`;
 export const ABOUT_TEXT2 = `In addition to mobile development, I am also skilled in web development and ready to expand my expertise in back-end development and various programming languages. I'm excited to take on new challenges and continue growing in the tech field.`;
