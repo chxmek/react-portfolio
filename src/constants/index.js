@@ -29,7 +29,7 @@ export const EXPERIENCES = [
     role: "Electronics and Computer Systems Engineering",
     company: "Silpakorn University",
     description: `In my classes, I learned the fundamentals of programming and gained experience with languages such as C, C++, Assembly, Python, HTML, CSS, and JavaScript. I also developed a full-stack classroom reservation system project using the Django framework. (GPA : 3.08)`,
-    technologies: ["HTML", "CSS", "JavaScript", "Python", "Django", "Flutter"],
+    technologies: ["C", "C++", "Assembly", "HTML", "CSS", "JavaScript", "Python", "Django", "Flutter", "MATLAB"],
   },
   {
     year: "2014 - 2020",
