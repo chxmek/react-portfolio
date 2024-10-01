@@ -9,7 +9,7 @@ function About() {
   });
 
   return (
-    <div className="border-b border-neutral-900 pb-4" ref={aboutRef}>
+    <div className="pb-4" ref={aboutRef}>
       <h2 className="mt-20 mb-14 text-center bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent ">
         About Me
       </h2>

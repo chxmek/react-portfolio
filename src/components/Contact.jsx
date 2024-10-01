@@ -24,7 +24,7 @@ function Contact() {
   }, []);
 
   return (
-    <div id="contact" className="border-b border-neutral-900 pb-20">
+    <div id="contact" className="pb-20">
       <h2 className={`my-10 text-center bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-5xl tracking-tight text-transparent transition-transform duration-500 ${isVisible ? 'scale-100' : 'scale-150'}`}>
         Get in Touch
       </h2>

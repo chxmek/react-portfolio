@@ -8,6 +8,7 @@ import {
   SiSwagger,
   SiFigma,
   SiMicrosoftsqlserver,
+  SiMysql,
   SiSourcetree,
   SiFirebase,
   SiExpress,
@@ -49,9 +50,9 @@ function Technologies() {
   }, []);
 
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <div className="pb-24">
       <h2 className="my-20 text-center bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
-        Technologies
+        Skills
       </h2>
       <div className="flex flex-wrap items-center justify-center gap-4">
         {[
@@ -124,6 +125,11 @@ function Technologies() {
             href: "https://www.microsoft.com/sql-server",
             icon: <SiMicrosoftsqlserver className="text-7xl text-red-700" />,
             name: "SQL Server",
+          },
+          {
+            href: "https://www.mysql.com/",
+            icon: <SiMysql className="text-7xl text-blue-700" />,
+            name: "MySQL",
           },
 
           {

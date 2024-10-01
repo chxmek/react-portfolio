@@ -9,7 +9,7 @@ function Hero() {
   });
 
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className="pb-4 lg:mb-35">
       <div className="flex flex-wrap" ref={heroRef}>
         <div
           className={`w-full lg:w-1/2 transition-transform duration-1000 ease-[cubic-bezier(0.4, 0, 0.2, 1)] delay-150 will-change-transform ${
