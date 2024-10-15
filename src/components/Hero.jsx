@@ -5,7 +5,6 @@ import profilePic from "../assets/myPic.png";
 function Hero() {
   const { ref: heroRef, inView: heroVisible } = useInView({
     triggerOnce: false,
-    threshold: 0.1,
   });
 
   return (
@@ -15,7 +14,7 @@ function Hero() {
           className={`w-full lg:w-1/2 transition-transform duration-1000 ease-[cubic-bezier(0.4, 0, 0.2, 1)] delay-150 will-change-transform ${
             heroVisible
               ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-10"  // เมื่อเลื่อนออกจะใช้ class opacity-0
+              : "opacity-100 translate-y-10"  // เมื่อเลื่อนออกจะใช้ class opacity-0
           }`}
         >
           <div className="flex flex-col items-center lg:items-start">

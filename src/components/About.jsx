@@ -5,7 +5,6 @@ import { ABOUT_TEXT, ABOUT_TEXT2 } from "../constants";
 function About() {
   const { ref: aboutRef, inView: aboutVisible } = useInView({
     triggerOnce: false, // ให้ตรวจจับทั้งเข้าและออก
-    threshold: 0.1,     // กำหนดความ sensitive ของการเลื่อน
   });
 
   return (

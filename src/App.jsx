@@ -1,10 +1,13 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Technologies from "./components/Technologies";
+import { Suspense, lazy } from "react";
+
+// Lazy load components
+const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"));
+const Experience = lazy(() => import("./components/Experience"));
+const Hero = lazy(() => import("./components/Hero"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Projects = lazy(() => import("./components/Projects"));
+const Technologies = lazy(() => import("./components/Technologies"));
 
 function App() {
   return (
@@ -22,14 +25,25 @@ function App() {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       </div> */}
       <div className="container mx-auto px-8">
-        <Navbar />
-        <Hero />
-        <About />
-        <Technologies />
-        <Experience />
-        <Projects />
-        <Contact />
+        {/* ใช้ Suspense เพื่อรอให้คอมโพเนนต์โหลดเสร็จก่อนแสดงผล */}
+        <Suspense fallback={<Spinner />}>
+          <Navbar />
+          <Hero />
+          <About />
+          <Technologies />
+          <Experience />
+          <Projects />
+          <Contact />
+        </Suspense>
       </div>
+    </div>
+  );
+}
+
+function Spinner() {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-cyan-500"></div>
     </div>
   );
 }
