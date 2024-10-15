@@ -84,5 +84,5 @@ export const CONTACT = {
   address:
     "155/8 That Choeng Chum Sub-district, Muang District, Sakon Nakhon, 47000",
   phoneNo: "(+66) 97-129-1752",
-  email: "chawanwits.mek@gmail.com",
+  email: "Chawanwits@outlook.com",
 };
