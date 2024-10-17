@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 
 // Lazy load components
 const About = lazy(() => import("./components/About"));
@@ -8,8 +8,39 @@ const Hero = lazy(() => import("./components/Hero"));
 const Navbar = lazy(() => import("./components/Navbar"));
 const Projects = lazy(() => import("./components/Projects"));
 const Technologies = lazy(() => import("./components/Technologies"));
-
+useState;
 function App() {
+  const [showButton, setShowButton] = useState(false);
+
+  // Show button when page is scrolled down by 300px
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 750) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Scroll to top function
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function Spinner() {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-cyan-500"></div>
+      </div>
+    );
+  }
+
   return (
     <div
       className="overflow-x-hidden text-neutral-300 antialiased 
@@ -36,14 +67,16 @@ function App() {
           <Contact />
         </Suspense>
       </div>
-    </div>
-  );
-}
-
-function Spinner() {
-  return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-cyan-500"></div>
+      {/* Scroll to top button */}
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 p-2 rounded-lg bg-cyan-800 text-white shadow-lg opacity-60
+          hover:bg-cyan-600 focus:outline-none"
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 }
