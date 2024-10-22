@@ -69,7 +69,7 @@ export const PROJECTS = [
     title: "IoT system development using ESP32 MQTT andNode-RED (12 hrs.)",
     image: iotCertificate,
     description:
-      "Creative electrical engineering projectto enhance the wisdom of IoT system development using ESP32 MQTT andNode-RED.",
+      "Creative electrical engineering project to enhance the wisdom of IoT system development using ESP32 MQTT andNode-RED.",
     technologies: ["IoT", "ESP32", "MQTT", "Node-RED"],
   },
   {
